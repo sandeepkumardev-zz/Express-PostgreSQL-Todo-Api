@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app",
+    "create-migrate": "npx sequelize-cli model:generate --name Todo --attributes title:string,isCompleted:string",
+    "up-migrate": "npx sequelize-cli db:migrate",
+    "down-migrate": "npx sequelize-cli db:migrate:undo",
+    "create-seed": "npx sequelize-cli seed:generate --name demo-user",
+    "up-seed": "npx sequelize-cli db:seed:all",
+    "down-seed": "npx sequelize-cli db:seed:undo:all"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5"
+  }
+}
